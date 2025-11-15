@@ -1,0 +1,64 @@
+# Example DAGLinter configuration file
+# Place this in your project root as .daglinter.yml
+
+version: 1
+
+# File/directory exclusions
+exclude:
+  - "**/tests/**"
+  - "**/__pycache__/**"
+  - "*.pyc"
+  - "**/venv/**"
+  - "**/env/**"
+
+# File/directory inclusions (optional)
+include:
+  - "dags/**/*.py"
+  - "airflow_dags/**/*.py"
+
+# Rule configurations
+rules:
+  # DL001: Heavy imports at module level
+  heavy-imports:
+    enabled: true
+    severity: error  # error, warning, info, off
+    libraries:
+      - pandas
+      - numpy
+      - sklearn
+      - tensorflow
+      - torch
+      - matplotlib
+      - seaborn
+      - plotly
+      - scipy
+
+  # DL002: Database connections at module level
+  db-connections:
+    enabled: true
+    severity: error
+
+  # DL003: Missing DAG documentation
+  missing-docs:
+    enabled: true
+    severity: warning
+    min_length: 20  # Minimum documentation length
+
+  # DL004: Complex task dependencies
+  complex-dependencies:
+    enabled: true
+    severity: warning
+    max_fan_out: 10   # Max downstream dependencies per task
+    max_fan_in: 10    # Max upstream dependencies per task
+
+# Output settings
+output:
+  format: terminal  # terminal, json, sarif
+  color: auto       # auto, always, never
+  verbose: false
+  quiet: false
+
+# Performance settings
+performance:
+  max_workers: 1          # Number of parallel workers (MVP: 1)
+  timeout_per_file: 30    # Timeout in seconds per file

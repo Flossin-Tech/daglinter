@@ -1,0 +1,7 @@
+# Invalid YAML syntax
+rules:
+  - this is not
+  valid: yaml
+  - structure
+    bad-indent:
+  missing: colon

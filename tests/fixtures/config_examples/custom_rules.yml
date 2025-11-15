@@ -1,0 +1,17 @@
+---
+# Custom rule parameters
+rules:
+  heavy-imports:
+    enabled: true
+    libraries:
+      - pandas
+      - custom_heavy_library
+
+  missing-docs:
+    enabled: true
+    min_length: 50
+
+  complex-dependencies:
+    enabled: true
+    max_fan_out: 5
+    max_fan_in: 5

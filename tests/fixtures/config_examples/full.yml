@@ -1,0 +1,44 @@
+---
+# Full configuration with all options
+rules:
+  heavy-imports:
+    enabled: true
+    severity: error
+    libraries:
+      - pandas
+      - numpy
+      - sklearn
+      - tensorflow
+      - torch
+
+  db-connections:
+    enabled: true
+    severity: error
+
+  missing-docs:
+    enabled: true
+    severity: warning
+    min_length: 20
+
+  complex-dependencies:
+    enabled: true
+    severity: warning
+    max_fan_out: 10
+    max_fan_in: 10
+
+exclude:
+  - "**/tests/**"
+  - "**/__pycache__/**"
+  - "**/*.pyc"
+  - "**/venv/**"
+  - "**/env/**"
+
+output:
+  format: terminal
+  color: auto
+  verbose: false
+  quiet: false
+
+performance:
+  max_workers: 1
+  timeout_per_file: 30
