@@ -1,10 +1,9 @@
 # DAGLinter
 
-[![Tests](https://github.com/Flossin-Tech/daglinter/workflows/Tests/badge.svg)](https://github.com/Flossin-Tech/daglinter/actions)
-[![Coverage](https://codecov.io/gh/daglinter/daglinter/branch/main/graph/badge.svg)](https://codecov.io/gh/daglinter/daglinter)
-[![PyPI version](https://badge.fury.io/py/daglinter.svg)](https://badge.fury.io/py/daglinter)
-[![Python Support](https://img.shields.io/pypi/pyversions/daglinter.svg)](https://pypi.org/project/daglinter/)
+[![Python Support](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Type checker: mypy](https://img.shields.io/badge/type%20checker-mypy-blue.svg)](https://mypy-lang.org/)
 
 **A static analysis tool for Apache Airflow DAG files**
 
